@@ -212,6 +212,27 @@ for message in messages:
 pieces_client.close()
 ```
 
+### List Chat IDs
+
+The `chat.id` method returns a list of all chat ids.
+
+##### Example
+
+```python
+from pieces_os_client.wrapper import PiecesClient
+
+# Initialize the PiecesClient
+pieces_client = PiecesClient()
+
+# Get all chats and print their ids
+chats = pieces_client.copilot.chats()
+for chat in chats:
+    print(chat.id)
+
+# Close the client
+pieces_client.close()
+```
+
 ##### Set the Chat Name
 
 The `name` setter method allows you to set the chat name.
